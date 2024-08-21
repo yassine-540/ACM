@@ -720,3 +720,78 @@ footer{
     font-weight: lighter;
     text-align: center;
 }
+@keyframes appear_h {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appear_img {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.home-img img{
+    animation: appear_img;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+h1{
+    animation: appear_h ease;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+.home-content h3{
+    animation: appear_h linear;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+}
+.home-content p{
+    animation: appear_p;
+    animation-duration: 1.5s;
+    animation-delay: 3s;
+}
+.About h2, .Application h2 {
+    animation: appear_h linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes appear_p {
+    from{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes appear_btn {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.description p,.apply p{
+    animation: appear_p linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.description button, .apply button{
+    animation: appear_btn linear ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
